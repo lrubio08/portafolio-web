@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!dau__#mipzxpox*_9j1k7f)ba0yr*p_br2b^egnztqluo7i9@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
-CSRF_TRUSTED_ORIGINS = ['https://2b04-190-209-109-69.ngrok-free.app']
+ALLOWED_HOSTS = ['luis-rubio-dev.herokuapp.com']
+
 
 # Application definition
 
@@ -126,7 +126,7 @@ USE_TZ = True
 import os
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 
@@ -142,3 +142,7 @@ EMAIL_PORT = config('EMAIL_PORT', cast=int)
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD =config('EMAIL_HOST_PASSWORD')
+
+# Heroku
+import django_heroku
+django_heroku.settings(locals())
