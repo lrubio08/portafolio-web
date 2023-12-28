@@ -1,0 +1,183 @@
+{% extends "app_portafolio/base.html" %}
+{% block title %}Luis Rubio | Portafolio Web{% endblock title %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+<!--SECCION PRINCIPAL-->
+<div class="section section-title " id="title">
+    <div class="container">
+        {% if messages %}
+            <div id="message" class="alert alert-success mensaje-usuario">
+                {% for message in messages %}
+                    {{ message }}
+                    <button class="btn btn-danger"type="button" onclick="this.parentElement.style.display='none';">Cerrar</button>
+                {% endfor %}
+            </div>
+        {% endif %}
+        <div class="row">
+            <div class="col-12  d-flex justify-content-center align-items-center">
+                <h1 class="title">
+                    <span>¡Hola, Soy Luis Rubio Ramírez!</span>
+                    <br>
+                    <span class="span-title">"Desarrollador FullStack" </span>
+                </h1>    
+            </div>
+        </div>
+    </div>
+</div>
+<div class="angle angle1">
+</div>
+
+<!--SECCION ACERCA DE-->
+
+<div class="section acerca-de" id="acerca-de" >
+    <div class="container">
+        <h2 class="titulo-secciones m-2 "></h2>
+        <h3 class="text-center titulo-nombre">¿Quién es Luis?</h3>
+        <div class="row">
+            <div class="col-12 col-lg-6 perfil">
+                <div class="titulo-y-imagen">
+                    
+                    <img class="imagen-perfil m-2"  src="{% static "imagenes/yo.jpg" %}" alt="">
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <h4 class="titulo-parrafo"> "Un desarrollador Full Stack apasionado por la tecnología y la programación".</h4>
+                <p>Recientemente completé un bootcamp intensivo de Full Stack donde adquirí habilidades en una variedad de tecnologías, incluyendo <span class="lenguajes">Python con Django, HTML, CSS, JavaScript, Bootstrap y bases de datos PostgreSQL</span> .</p>
+                <p>Durante el bootcamp, trabajé en varios proyectos que me permitieron aplicar y profundizar en mis conocimientos técnicos. Aprendí a construir <span class="lenguajes">aplicaciones web desde cero</span>, desde el diseño de la base de datos hasta la creación de <span class="lenguajes">interfaces de usuario atractivas, funcionales y responsivas</span>.</p>
+                <p>Me encanta el desafío de resolver problemas complejos y la satisfacción de construir algo desde cero. Siempre estoy buscando oportunidades para aprender y crecer como desarrollador. ¡Espero tener la oportunidad de trabajar contigo en el futuro!</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="angle angle2">
+</div>
+<!--SECCION HABILIDADES Y HERRAMIENTAS -->
+<div class="section herramientas" id="herramientas">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="titulo-secciones m-2 "> </h2>
+                <h3 class="titulo-nombre m-2">Mis Herramientas Adquiridas</h3>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-sm-5 col-md-3 col-lg-4  d-flex flex-column align-items-center herramienta">
+                <img class="img-herramientas" src="{% static "imagenes/python-100.png" %}" alt="lenguaje de programacion Python">
+                <p>Python</p>
+            </div>
+            <div class="col-12 col-sm-5 col-md-3 col-lg-4  d-flex flex-column align-items-center herramienta">
+                <img class="img-herramientas" src="{% static "imagenes/django-100.png" %}" alt="Framework django">
+                <p>Django</p>
+            </div>
+            <div class="col-12 col-sm-5 col-md-3 col-lg-4  d-flex flex-column align-items-center herramienta">
+                <img class="img-herramientas" src="{% static "imagenes/javascript-100.png" %}" alt="lenguaje de programacón JavaScript">
+                <p>JavaScript</p>
+            </div>
+            <div class="col-12 col-sm-5 col-md-3 col-lg-4  d-flex flex-column align-items-center herramienta">
+                <img class="img-herramientas" src="{% static "imagenes/html5-100.png" %}" alt="Lenguaje de marcado de hipertexto HTML">
+                <p>HTML</p>
+            </div>
+            <div class="col-12 col-sm-5 col-md-3 col-lg-4  d-flex flex-column align-items-center herramienta">
+                <img class="img-herramientas" src="{% static "imagenes/css3-100.png" %}" alt="Hoja de estilos en cascada CSS">
+                <p>CSS</p>
+            </div>
+            <div class="col-12 col-sm-5 col-md-3 col-lg-4  d-flex flex-column align-items-center herramienta">
+                <img class="img-herramientas" src="{% static "imagenes/bootstrap-100.png" %}" alt="framework de diseño web Bootstrap">
+                <p>Bootstrap</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="angle angle3"></div>
+<!--SECCION DE PROYECTOS-->
+<div class="section  mis-proyectos" id="mis-proyectos">
+    <div class="container">
+        <h2 class="titulo-secciones"> </h2>
+        <h3 class="titulo-nombre">Aplicando lo aprendido</h3>
+        <div class="row">
+            <div class="col-12 col-lg-6 mt-3 container-text-project justify-content-center">
+                <h4 class="titulo-proyectos"> TaskSmart | Gestor de Tareas Pendientes</h4>
+                <p>
+                    Gestor de Tareas Pendientes, una herramienta diseñada para simplificar la organización y administración eficiente de tus tareas diarias. 
+                    Con esta aplicación, puedes crear, eliminar y gestionar tus tareas de manera intuitiva, manteniendo un control total sobre tus responsabilidades.
+                </p>
+                <div class="img-container-lenguajes">
+                    <img src="{% static "imagenes/html.png" %}" alt="HTML">
+                    <img src="{% static "imagenes/CSS.png" %}" alt="CSS">
+                    <img src="{% static "imagenes/boostrap.png" %}" alt="Boostrap">
+                    <img src="{% static "imagenes/javascript.png" %}" alt="JavaScript">
+                    <img src="{% static "imagenes/django.png" %}" alt="Django"> 
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 d-flex justify-content-center">
+                        <a href=""><button class="btn btn-primary mt-3 mb-2 btn-proyecto-tareas">Enlace Web</button></a>
+                    </div >
+                    <div class="col-12 col-md-6 d-flex justify-content-center">
+                        <a href=""><button class="btn btn-primary mt-3 mb-2 btn-proyecto-tareas">Repositorio GitHub</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6 d-flex justify-content-center">
+                <img class ="img-web-tareas"src="{% static "imagenes/TaskSmart1.png" %}" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="angle angle4"></div>
+<!--SECCION DE CONTACTO-->
+<div class="section contacto" id="contacto">
+    <div class="container">
+        <h2 class="titulo-secciones"></h2>
+        <h2 class="titulo-nombre text-center m-2">Formulario de Contacto</h2>
+        <div class="container mt-4 mb-4 ">
+            <div class="row ">
+                <div class="col-12 col-lg-6  justify-content-center">
+                    <form class="" id="myForm" method="POST" action="{% url "index" %}">
+                        {% csrf_token %}
+
+                        
+                        <p class="campos-obligatorios"> Todos los campos son obligatorios</p>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" name="first_name" class="form-control"  placeholder="Ingrese su nombre" oninput="changeStyle(this)" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text"name="last_name" class="form-control"  placeholder="Ingrese su apellido" oninput="changeStyle(this)" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control"  placeholder="ejemplo@ejemplo.com" oninput="changeStyle(this)" required>
+                        </div>
+                        <div class="form-group" id="message">
+                            <textarea class="form-control" name="message" id="exampleTextarea" placeholder="Dejame un mensaje"rows="3" oninput="changeStyle(this)" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-registro mt-2 w-100">Enviar Mensaje</button>
+                    </form>
+                </div>
+                <!--Redes Sociales-->
+                <div class="col-12 col-lg-6 d-flex align-items-center">
+                    <div class="row">
+                        <div class="col-6 redes-sociales">
+                            <span class="text-center">
+                                <a href="https://github.com/lrubio08" target="_blank"><img src="{% static "imagenes/github.png" %}" alt=""></a>
+                            </span>
+                        </div>
+                        <div class="col-6 redes-sociales">
+                            <span class="text-center">
+                                <a href="https://linkedin.com/in/luis-rubio-ramírez" target="_blank"><img src="{% static "imagenes/linkedin.png" %}" alt=""></a>
+                            </span>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-center parrafo-redes">¡No dudes en ponerte en contacto por el medio que deses!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
